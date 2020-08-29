@@ -10,9 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_left_and_right"
         android:layout_marginEnd="@dimen/button_margin_left_and_right"
-        android:background="@drawable/material_button"
+        android:backgroundTint="@color/count_button_color"
         android:text="@string/calculate_button_text"
-        app:backgroundTint="@color/count_button_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SavingsCalculator</string>
+    <string name="calculate_button_text">Рассчитать</string>
 </resources>

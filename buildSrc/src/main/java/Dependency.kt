@@ -36,7 +36,7 @@ object Versions {
     const val androidX = "1.1.0"
     const val koin = "2.1.5"
 
-    const val material = "1.1.0"
+    const val material = "1.2.0"
     const val constraintLayout = "2.0.0"
     const val lifecycle = "2.2.0"
 
