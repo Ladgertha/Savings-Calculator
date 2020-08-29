@@ -5,4 +5,6 @@
     <color name="colorAccent">#009999</color>
 
     <color name="count_button_color">#FFBF40</color>
+    <color name="count_button_pressed_state">#FFAA00</color>
+    <color name="count_button_focused_state">#FFD073</color>
 </resources>
