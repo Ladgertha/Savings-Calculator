@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#1D7373</color>
-    <color name="colorPrimaryDark">#006363</color>
+    <color name="colorPrimaryDark">#002222</color>
     <color name="colorAccent">#009999</color>
+    <color name="white">#FFFFFF</color>
+    <color name="toolbar_color">#002929</color>
+    <color name="tab_layout_color">#003E3E</color>
+
+    <color name="background">#1D7373</color>
 
     <color name="count_button_color">#FFBF40</color>
     <color name="count_button_pressed_state">#FFAA00</color>

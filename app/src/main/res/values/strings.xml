@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">SavingsCalculator</string>
+    <string name="app_name">Калькулятор сбережений</string>
     <string name="calculate_button_text">Рассчитать</string>
+    
+    <string name="main_fragment_sum_hint">Сумма, которую нужно накопить</string>
+    <string name="main_fragment_quantity_hint">Количество %s</string>
+
+    <!-- -->
+    <string name="days">День</string>
+    <string name="month">Месяц</string>
+    <string name="year">Год</string>
+    
 </resources>

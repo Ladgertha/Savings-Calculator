@@ -2,4 +2,5 @@
 <resources>
     <dimen name="button_margin_left_and_right">16dp</dimen>
     <dimen name="material_button_corner_radius">8dp</dimen>
+    <dimen name="main_fragment_padding">16dp</dimen>
 </resources>
