@@ -12,4 +12,6 @@
     <color name="count_button_color">#FFBF40</color>
     <color name="count_button_pressed_state">#FFAA00</color>
     <color name="count_button_focused_state">#FFD073</color>
+
+    <color name="hint_text_color">#FF7373</color>
 </resources>

@@ -1,15 +1,14 @@
 package ru.ladgertha.savingscalculator.adapter
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.*
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import ru.ladgertha.savingscalculator.ui.fragments.MainFragment
 import ru.ladgertha.savingscalculator.ui.fragments.SecondFragment
 
-class ViewPagerAdapter(fragmentManager: FragmentManager) :
-    FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class ViewPagerAdapter(fragmentManager: FragmentActivity) :
+    FragmentStateAdapter(fragmentManager) {
 
-    override fun getItem(position: Int): Fragment {
+    override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
                 MainFragment()
@@ -24,22 +23,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager) :
         }
     }
 
-    override fun getCount(): Int {
+    override fun getItemCount(): Int {
         return 2
-    }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return when (position) {
-            0 -> {
-                "First"
-            }
-            1 -> {
-                "Second"
-            }
-            else -> {
-                // TODO Add error
-                "Unknown"
-            }
-        }
     }
 }

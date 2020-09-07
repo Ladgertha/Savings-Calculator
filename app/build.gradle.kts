@@ -44,6 +44,7 @@ dependencies {
     implementation(Libraries.material)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycle)
+    implementation(Libraries.viewPager)
 
     // di
     implementation(Libraries.koin)
