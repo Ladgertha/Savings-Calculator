@@ -36,9 +36,10 @@ object Versions {
     const val androidX = "1.1.0"
     const val koin = "2.1.5"
 
-    const val material = "1.1.0"
+    const val material = "1.2.0"
     const val constraintLayout = "2.0.0"
     const val lifecycle = "2.2.0"
+    const val viewPager = "1.1.0-alpha01"
 
     // Test
     const val jUnit = "4.12"
@@ -52,6 +53,7 @@ object Libraries {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val lifecycle = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    const val viewPager = "androidx.viewpager2:viewpager2:${Versions.viewPager}"
 
     // DI
     const val koin = "org.koin:koin-core:${Versions.koin}"
