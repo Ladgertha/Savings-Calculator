@@ -90,13 +90,13 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/count_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_left_and_right"
         android:layout_marginEnd="@dimen/button_margin_left_and_right"
-        android:background="@drawable/button_selector_state"
+        android:backgroundTint="@color/count_button_color"
         android:text="@string/calculate_button_text"
         app:layout_constraintTop_toBottomOf="@+id/main_term" />
 
