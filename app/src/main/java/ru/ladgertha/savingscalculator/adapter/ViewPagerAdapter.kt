@@ -3,7 +3,9 @@ package ru.ladgertha.savingscalculator.adapter
 import androidx.fragment.app.*
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import ru.ladgertha.savingscalculator.ui.fragments.MainFragment
-import ru.ladgertha.savingscalculator.ui.fragments.SecondFragment
+import ru.ladgertha.savingscalculator.ui.fragments.CalculateTermFragment
+
+private const val FRAGMENTS_COUNT = 2
 
 class ViewPagerAdapter(fragmentManager: FragmentActivity) :
     FragmentStateAdapter(fragmentManager) {
@@ -14,7 +16,7 @@ class ViewPagerAdapter(fragmentManager: FragmentActivity) :
                 MainFragment()
             }
             1 -> {
-                SecondFragment()
+                CalculateTermFragment()
             }
             else -> {
                 // TODO Add error
@@ -24,6 +26,6 @@ class ViewPagerAdapter(fragmentManager: FragmentActivity) :
     }
 
     override fun getItemCount(): Int {
-        return 2
+        return FRAGMENTS_COUNT
     }
 }

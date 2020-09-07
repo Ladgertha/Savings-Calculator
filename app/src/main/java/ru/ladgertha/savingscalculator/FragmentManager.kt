@@ -2,14 +2,14 @@ package ru.ladgertha.savingscalculator
 
 import androidx.fragment.app.Fragment
 import ru.ladgertha.savingscalculator.ui.fragments.MainFragment
-import ru.ladgertha.savingscalculator.ui.fragments.SecondFragment
+import ru.ladgertha.savingscalculator.ui.fragments.CalculateTermFragment
 
 class FragmentManager {
 
     fun getFragment(position: Int): Fragment {
         return when (position) {
             0 -> MainFragment()
-            1 -> SecondFragment()
+            1 -> CalculateTermFragment()
             else -> MainFragment()
             // TODO ErrorFragment
         }
