@@ -1,12 +1,9 @@
 package ru.ladgertha.savingscalculator.ui.fragments
 
-import android.content.Intent
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import ru.ladgertha.savingscalculator.R
-import java.util.*
+import ru.ladgertha.savingscalculator.ui.base.BaseFragment
 
-class MainFragment: Fragment(R.layout.fragment_main_layout) {
+class MainFragment : BaseFragment(R.layout.fragment_main_layout) {
 
     companion object {
         fun newInstance() = MainFragment()
