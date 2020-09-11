@@ -47,7 +47,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,10 +65,11 @@
         app:layout_constraintStart_toEndOf="@id/calculate_fragment_quantity_hint">
 
         <AutoCompleteTextView
+            android:id="@+id/term_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/days"
             android:inputType="none"
-            android:labelFor="@+id/main_term"
             android:text="@string/days" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +87,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
