@@ -1,6 +1,6 @@
 object PluginVersion {
     const val kotlin = "1.3.61"
-    const val gradle = "3.5.2"
+    const val gradle = "4.1.0"
 }
 
 object Plugin {

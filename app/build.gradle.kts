@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 plugins {
     id(Plugin.ANDROID_APPLICATION)
     id(Plugin.KOTLIN_ANDROID)
-    id(Plugin.KOTLIN_ANDROID_EXTENSIONS)
 }
 
 android {
@@ -35,6 +34,10 @@ android {
     kotlinOptions {
         val options = this as? KotlinJvmOptions
         options?.jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
