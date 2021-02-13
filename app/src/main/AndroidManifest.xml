@@ -2,11 +2,11 @@
     package="ru.ladgertha.savingscalculator">
 
     <application
+        android:name=".SavingsCalculatorApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -17,6 +17,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
             </intent-filter>
 
         </activity>

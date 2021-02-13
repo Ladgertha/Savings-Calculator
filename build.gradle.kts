@@ -9,6 +9,9 @@ buildscript {
     dependencies {
         classpath(ClassPath.gradle)
         classpath(ClassPath.kotlin)
+        classpath(ClassPath.googleServices)
+        classpath(ClassPath.crashlytics)
+        classpath(ClassPath.performance)
     }
 }
 

@@ -1,6 +1,7 @@
-package ru.ladgertha.savingscalculator
+package ru.ladgertha.savingscalculator.adapter
 
 import androidx.fragment.app.Fragment
+import ru.ladgertha.savingscalculator.R
 import ru.ladgertha.savingscalculator.ui.fragments.MainFragment
 import ru.ladgertha.savingscalculator.ui.fragments.CalculateTermFragment
 
