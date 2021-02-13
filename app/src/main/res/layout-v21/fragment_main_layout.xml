@@ -21,7 +21,7 @@
         app:layout_constraintGuide_end="@dimen/button_margin_left_and_right" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/main_hint"
+        android:id="@+id/mainFragmentMainHint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/fragments_padding"
@@ -29,20 +29,21 @@
         android:text="@string/main_fragment_text_hint"
         android:textColor="@color/hint_text_color"
         android:textSize="@dimen/fragments_hint_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/main_fragment_sum"
+        app:layout_constraintBottom_toTopOf="@+id/mainFragmentSum"
         app:layout_constraintEnd_toEndOf="@id/right_guideline"
         app:layout_constraintStart_toStartOf="@id/left_guideline" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/main_fragment_sum"
+        android:id="@+id/mainFragmentSum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/main_fragment_sum_hint"
-        app:layout_constraintBottom_toTopOf="@+id/main_fragment_quantity_hint"
+        app:layout_constraintBottom_toTopOf="@+id/mainFragmentQuantityHint"
         app:layout_constraintEnd_toEndOf="@id/right_guideline"
         app:layout_constraintStart_toStartOf="@id/left_guideline">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mainFragmentSumEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number" />
@@ -50,19 +51,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/main_fragment_quantity_hint"
+        android:id="@+id/mainFragmentQuantityHint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/main_fragment_quantity_hint"
         android:paddingTop="@dimen/fragments_padding"
         android:paddingBottom="@dimen/fragments_padding"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/main_term"
+        app:layout_constraintEnd_toStartOf="@id/mainFragmentTerm"
         app:layout_constraintStart_toStartOf="@id/left_guideline"
         app:layout_constraintTop_toTopOf="parent"
         tools:hint="Количество дней">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mainFragmentQuantityEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number" />
@@ -70,7 +72,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/main_term"
+        android:id="@+id/mainFragmentTerm"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,11 +82,11 @@
         android:paddingBottom="@dimen/fragments_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/right_guideline"
-        app:layout_constraintStart_toEndOf="@id/main_fragment_quantity_hint"
+        app:layout_constraintStart_toEndOf="@id/mainFragmentQuantityHint"
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/term_tv"
+            android:id="@+id/mainFragmentTermTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/days"
@@ -94,13 +96,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/count_button"
+        android:id="@+id/mainFragmentCountButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_left_and_right"
         android:layout_marginEnd="@dimen/button_margin_left_and_right"
+        android:padding="16dp"
+        android:textColor="@color/hint_text_color"
         android:backgroundTint="@color/count_button_color"
         android:text="@string/calculate_button_text"
-        app:layout_constraintTop_toBottomOf="@+id/main_term" />
+        app:layout_constraintTop_toBottomOf="@+id/mainFragmentTerm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

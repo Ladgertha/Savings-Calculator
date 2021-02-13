@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1D7373</color>
-    <color name="colorPrimaryDark">#002222</color>
-    <color name="colorAccent">#009999</color>
+    <color name="colorPrimary">#2F273A</color>
+    <color name="colorPrimaryDark">#3B2E4C</color>
+    <color name="colorAccent">#534268</color>
     <color name="white">#FFFFFF</color>
-    <color name="toolbar_color">#002929</color>
-    <color name="tab_layout_color">#003E3E</color>
+    <color name="toolbar_color">#56436E</color>
+    <color name="tab_layout_color">#745c94</color>
 
-    <color name="background">#1D7373</color>
+    <color name="background">#f8f2e4</color>
 
-    <color name="count_button_color">#FFBF40</color>
-    <color name="count_button_pressed_state">#FFAA00</color>
-    <color name="count_button_focused_state">#FFD073</color>
+    <color name="count_button_color">#8bddce</color>
+    <color name="count_button_pressed_state">#6BAA9E</color>
+    <color name="count_button_focused_state">#A8FFEF</color>
 
-    <color name="hint_text_color">#FF7373</color>
+    <color name="hint_text_color">#000000</color>
+
+    <color name="snack_bar_text_color">#f8f2e4</color>
+    <color name="snack_bar_background">#2F273A</color>
 </resources>

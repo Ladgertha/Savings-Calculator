@@ -13,7 +13,7 @@
         app:titleTextColor="@color/white" />
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout_fragments"
+        android:id="@+id/tabLayoutFragments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/tab_layout_color"
@@ -21,10 +21,10 @@
         app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/tab_layout_fragments"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutFragments" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
