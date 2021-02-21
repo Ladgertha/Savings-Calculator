@@ -3,7 +3,9 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 plugins {
     id(Plugin.ANDROID_APPLICATION)
     id(Plugin.KOTLIN_ANDROID)
-    id(Plugin.KOTLIN_ANDROID_EXTENSIONS)
+    id(Plugin.GOOGLE_SERVICES)
+    id(Plugin.CRASHLYTICS)
+    id(Plugin.PERFORMANCE)
 }
 
 android {
@@ -19,6 +21,7 @@ android {
         versionName = AppData.versionName
 
         testInstrumentationRunner = AppData.testInstrumentationRunner
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -36,6 +39,10 @@ android {
         val options = this as? KotlinJvmOptions
         options?.jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,11 +51,28 @@ dependencies {
     implementation(Libraries.material)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycle)
+    implementation(Libraries.lifecycleViewModel)
+    implementation(Libraries.lifecycleCommon)
+    implementation(Libraries.lifecycleCompiler)
+    implementation(Libraries.lifecycleExtensions)
+    implementation(Libraries.lifecycleLiveData)
+    implementation(Libraries.lifecycleProcess)
+    implementation(Libraries.lifecycleRuntime)
+    implementation(Libraries.viewPager)
 
     // di
     implementation(Libraries.koin)
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinViewModel)
+
+    // Coroutines
+    implementation(Libraries.coroutinesCore)
+    implementation(Libraries.coroutinesAndroid)
+
+    // FIREBASE
+    implementation(Libraries.firebaseAnalytics)
+    implementation(Libraries.firebaseCrashlytics)
+    implementation(Libraries.firebasePerformance)
 
     // TESTS
     testImplementation(Libraries.jUnit)

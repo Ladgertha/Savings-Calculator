@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_margin_left_and_right">16dp</dimen>
+    <dimen name="material_button_corner_radius">8dp</dimen>
+    <dimen name="fragments_padding">16dp</dimen>
+    <dimen name="fragments_hint_text_size">18sp</dimen>
+</resources>

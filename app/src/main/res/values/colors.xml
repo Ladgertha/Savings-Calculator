@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#2F273A</color>
+    <color name="colorPrimaryDark">#3B2E4C</color>
+    <color name="colorAccent">#534268</color>
+    <color name="white">#FFFFFF</color>
+    <color name="toolbar_color">#56436E</color>
+    <color name="tab_layout_color">#745c94</color>
+
+    <color name="background">#f8f2e4</color>
+
+    <color name="count_button_color">#8bddce</color>
+    <color name="count_button_pressed_state">#6BAA9E</color>
+    <color name="count_button_focused_state">#A8FFEF</color>
+
+    <color name="hint_text_color">#000000</color>
+
+    <color name="snack_bar_text_color">#f8f2e4</color>
+    <color name="snack_bar_background">#2F273A</color>
 </resources>
