@@ -1,6 +1,6 @@
 object PluginVersion {
     const val kotlin = "1.3.61"
-    const val gradle = "4.1.0"
+    const val gradle = "4.1.1"
     const val googleServices = "4.3.5"
     const val crashlytics = "2.5.0"
     const val performance = "1.3.4"
@@ -28,7 +28,7 @@ object AppData {
     const val targetSdkVersion = 29
     const val minSdkVersion = 19
 
-    const val versionCode = 1
+    const val versionCode = 2
     const val versionName = "1.0.0"
 
     const val applicationId = "ru.ladgertha.savingscalculator"
