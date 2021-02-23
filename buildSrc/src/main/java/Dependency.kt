@@ -28,7 +28,7 @@ object AppData {
     const val targetSdkVersion = 29
     const val minSdkVersion = 19
 
-    const val versionCode = 2
+    const val versionCode = 3
     const val versionName = "1.0.0"
 
     const val applicationId = "ru.ladgertha.savingscalculator"
@@ -47,6 +47,7 @@ object Versions {
 
     const val coroutines = "1.3.9"
 
+    const val firebaseBom = "26.5.0"
     const val firebaseAnalytics = "18.0.2"
     const val firebaseCrashlytics = "17.3.1"
     const val firebasePerformance = "19.1.1"
@@ -84,9 +85,10 @@ object Libraries {
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
     // FIREBASE
-    const val firebaseAnalytics = "com.google.firebase:firebase-analytics:${Versions.firebaseAnalytics}"
-    const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics:${Versions.firebaseCrashlytics}"
-    const val firebasePerformance = "com.google.firebase:firebase-perf:${Versions.firebasePerformance}"
+    const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBom}"
+    const val firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx"
+    const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+    const val firebasePerformance = "com.google.firebase:firebase-perf-ktx"
     // TESTS
     const val jUnit = "junit:junit:${Versions.jUnit}"
 }

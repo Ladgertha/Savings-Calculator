@@ -8,6 +8,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import ru.ladgertha.savingscalculator.interactor.CountUseCase
 import ru.ladgertha.savingscalculator.utils.Event
+import ru.ladgertha.savingscalculator.utils.Terms
 import java.math.BigDecimal
 
 class MainViewModel(
@@ -17,16 +18,16 @@ class MainViewModel(
     private val resultSumLiveData = MutableLiveData<Event<BigDecimal>>()
     private val resultTermLiveData = MutableLiveData<Event<BigDecimal>>()
 
-    fun countSum(sum: BigDecimal, term: BigDecimal) {
+    fun countSum(sum: BigDecimal, termCount: BigDecimal, term: Terms) {
         viewModelScope.launch(getCoroutineExceptionHandler()) {
-            val result = countInteractor.countSum(sum, term)
+            val result = countInteractor.countSum(sum, termCount, term)
             resultSumLiveData.postValue(Event(result))
         }
     }
 
-    fun countTerm(sum: BigDecimal, term: BigDecimal) {
+    fun countTerm(sum: BigDecimal, termCount: BigDecimal, term: Terms) {
         viewModelScope.launch(getCoroutineExceptionHandler()) {
-            val result = countInteractor.countTerm(sum, term)
+            val result = countInteractor.countTerm(sum, termCount, term)
             resultTermLiveData.postValue(Event(result))
         }
     }

@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/fragments_padding"
         android:paddingBottom="@dimen/fragments_padding"
-        android:text="@string/calculate_fragment_text_hint"
+        android:text="@string/calculate_sum_fragment_text_hint"
         android:textColor="@color/hint_text_color"
         android:textSize="@dimen/fragments_hint_text_size"
         app:layout_constraintBottom_toTopOf="@+id/calculateFragmentQuantityHint"
@@ -37,7 +37,7 @@
         android:id="@+id/calculateFragmentQuantityHint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/main_fragment_quantity_hint"
+        android:hint="@string/calculate_partial_fragment_quantity_hint"
         android:paddingTop="@dimen/fragments_padding"
         android:paddingBottom="@dimen/fragments_padding"
         app:layout_constraintBottom_toTopOf="@+id/calculateFragmentSum"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_left_and_right"
-        android:hint="@string/main_fragment_term_hint"
+        android:hint="@string/calculate_partial_fragment_term_hint"
         android:paddingBottom="@dimen/fragments_padding"
         app:layout_constraintBottom_toTopOf="@+id/calculateFragmentSum"
         app:layout_constraintEnd_toEndOf="@id/right_guideline"
@@ -79,7 +79,7 @@
         android:id="@+id/calculateFragmentSum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/calculate_fragment_sum_hint"
+        android:hint="@string/calculate_sum_fragment_sum_hint"
         android:paddingBottom="@dimen/fragments_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/right_guideline"
@@ -94,14 +94,16 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/calculateFragmentCountButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/button_margin_left_and_right"
         android:layout_marginEnd="@dimen/button_margin_left_and_right"
-        android:background="@drawable/button_selector_state"
+        android:backgroundTint="@color/count_button_color"
         android:text="@string/calculate_button_text"
+        android:padding="16dp"
+        android:textColor="@color/hint_text_color"
         app:layout_constraintTop_toBottomOf="@+id/calculateFragmentSum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

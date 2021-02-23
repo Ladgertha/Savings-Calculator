@@ -2,18 +2,18 @@
     <string name="app_name">Калькулятор сбережений</string>
     <string name="calculate_button_text">Рассчитать</string>
     
-    <string name="main_fragment_sum_hint">Сумма, которую нужно накопить</string>
-    <string name="main_fragment_quantity_hint">Количество дней</string>
-    <string name="main_fragment_text_hint">Введите желаемую сумму и срок, за который хотите её накопить, и мы покажем, сколько надо откладывать.</string>
-    <string name="main_fragment_term_hint">Срок</string>
-    <string name="main_fragment_tab_title">Срок</string>
+    <string name="calculate_partial_fragment_sum_hint">Сумма, которую нужно накопить</string>
+    <string name="calculate_partial_fragment_quantity_hint">Введите срок</string>
+    <string name="calculate_partial_fragment_text_hint">Введите желаемую сумму и срок, за который хотите её накопить, и мы покажем, сколько надо откладывать.</string>
+    <string name="calculate_partial_fragment_term_hint">Срок</string>
+    <string name="calculate_partial_fragment_tab_title">Срок</string>
     
-    <string name="main_fragment_sum_result">Нужно откладывать %1sр., чтобы накопить %2sр. за %3s</string>
+    <string name="calculate_partial_fragment_sum_result">Нужно откладывать %1sр. в день, чтобы накопить %2sр. за %3s</string>
 
-    <string name="calculate_fragment_text_hint">Введите срок и сколько вы хотите откладывать. Мы покажем, какая сумма получится в итоге.</string>
-    <string name="calculate_fragment_tab_title">Сумма</string>
-    <string name="calculate_fragment_sum_hint">Сумма ежедневно</string>
-    <string name="calculate_fragment_text_sum_result">Если вы будете откладывать %1sр. в течение %2s, то накопите %3sр.</string>
+    <string name="calculate_sum_fragment_text_hint">Введите срок и сколько вы хотите откладывать. Мы покажем, какая сумма получится в итоге.</string>
+    <string name="calculate_sum_fragment_tab_title">Сумма</string>
+    <string name="calculate_sum_fragment_sum_hint">Сумма ежедневно</string>
+    <string name="calculate_sum_fragment_text_sum_result">Если вы будете откладывать %1sр. каждый день в течение %2s, то накопите %3sр.</string>
 
     <string name="error_fragment_title">Неизвестный фрагмент</string>
     
@@ -28,12 +28,44 @@
         <item quantity="other">%1$s дней</item>
     </plurals>
 
+    <plurals name="term_plurals_months">
+        <item quantity="one">%1$s месяц</item>
+        <item quantity="two">%1$s месяца</item>
+        <item quantity="few">%1$s месяца</item>
+        <item quantity="many">%1$s месяцев</item>
+        <item quantity="other">%1$s месяцев</item>
+    </plurals>
+
+    <plurals name="term_plurals_years">
+        <item quantity="one">%1$s год</item>
+        <item quantity="two">%1$s года</item>
+        <item quantity="few">%1$s года</item>
+        <item quantity="many">%1$s лет</item>
+        <item quantity="other">%1$s лет</item>
+    </plurals>
+
     <plurals name="sum_plurals_days">
-        <item quantity="one">%1$s день</item>
-        <item quantity="two">%1$s дня</item>
-        <item quantity="few">%1$s дня</item>
+        <item quantity="one">%1$s дня</item>
+        <item quantity="two">%1$s дней</item>
+        <item quantity="few">%1$s дней</item>
         <item quantity="many">%1$s дней</item>
         <item quantity="other">%1$s дня</item>
+    </plurals>
+
+    <plurals name="sum_plurals_months">
+        <item quantity="one">%1$s месяца</item>
+        <item quantity="two">%1$s месяцев</item>
+        <item quantity="few">%1$s месяцев</item>
+        <item quantity="many">%1$s месяцев</item>
+        <item quantity="other">%1$s месяца</item>
+    </plurals>
+
+    <plurals name="sum_plurals_years">
+        <item quantity="one">%1$s года</item>
+        <item quantity="two">%1$s лет</item>
+        <item quantity="few">%1$s лет</item>
+        <item quantity="many">%1$s лет</item>
+        <item quantity="other">%1$s года</item>
     </plurals>
 
     <!-- Term -->
