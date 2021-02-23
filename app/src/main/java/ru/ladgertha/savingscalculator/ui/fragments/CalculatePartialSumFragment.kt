@@ -55,7 +55,7 @@ class CalculatePartialSumFragment : BaseFragment(R.layout.fragment_calculate_par
     private fun setResultText(result: BigDecimal) {
         binding.mainFragmentMainHint.text =
             String.format(
-                getString(R.string.main_fragment_sum_result),
+                getString(R.string.calculate_partial_fragment_sum_result),
                 result.toString().trimStart('0').formatWithSpaces(),
                 binding.mainFragmentSumEditText.text.toString().trimStart('0').formatWithSpaces(),
                 getTerm()

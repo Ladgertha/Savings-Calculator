@@ -28,7 +28,7 @@ object AppData {
     const val targetSdkVersion = 29
     const val minSdkVersion = 19
 
-    const val versionCode = 2
+    const val versionCode = 3
     const val versionName = "1.0.0"
 
     const val applicationId = "ru.ladgertha.savingscalculator"

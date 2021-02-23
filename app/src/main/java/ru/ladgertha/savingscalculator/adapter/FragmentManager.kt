@@ -19,8 +19,8 @@ class FragmentManager {
 
     fun getTitle(position: Int): Int {
         return when (position) {
-            PARTIAL_SUM_FRAGMENT.ordinal -> R.string.main_fragment_tab_title
-            TOTAL_SUM_FRAGMENT.ordinal -> R.string.calculate_fragment_tab_title
+            PARTIAL_SUM_FRAGMENT.ordinal -> R.string.calculate_partial_fragment_tab_title
+            TOTAL_SUM_FRAGMENT.ordinal -> R.string.calculate_sum_fragment_tab_title
             else -> -1 // TODO ERROR TEXT
         }
     }

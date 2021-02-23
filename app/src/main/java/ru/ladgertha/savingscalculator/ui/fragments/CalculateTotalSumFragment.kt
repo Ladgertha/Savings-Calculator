@@ -56,7 +56,7 @@ class CalculateTotalSumFragment : BaseFragment(R.layout.fragment_calculate_total
     private fun setResultText(result: BigDecimal) {
         binding.calculateFragmentCalculateHint.text =
             String.format(
-                getString(R.string.calculate_fragment_text_sum_result),
+                getString(R.string.calculate_sum_fragment_text_sum_result),
                 binding.calculateFragmentSumEditText.text.toString().trimStart('0').formatWithSpaces(),
                 getTerm(),
                 result.toString().trimStart('0').formatWithSpaces()

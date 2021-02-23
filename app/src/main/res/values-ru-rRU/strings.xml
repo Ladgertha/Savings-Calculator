@@ -3,18 +3,18 @@
     <string name="app_name">Калькулятор сбережений</string>
     <string name="calculate_button_text">Рассчитать</string>
 
-    <string name="main_fragment_sum_hint">Сумма, которую нужно накопить</string>
-    <string name="main_fragment_quantity_hint">Срок, в течение которого будем копить</string>
-    <string name="main_fragment_text_hint">Введите желаемую сумму и срок, за который хотите её накопить, и мы покажем, сколько надо откладывать.</string>
-    <string name="main_fragment_term_hint">Срок</string>
-    <string name="main_fragment_tab_title">Срок</string>
+    <string name="calculate_partial_fragment_sum_hint">Сумма, которую нужно накопить</string>
+    <string name="calculate_partial_fragment_quantity_hint">Введите срок</string>
+    <string name="calculate_partial_fragment_text_hint">Введите желаемую сумму и срок, за который хотите её накопить, и мы покажем, сколько надо откладывать.</string>
+    <string name="calculate_partial_fragment_term_hint">Срок</string>
+    <string name="calculate_partial_fragment_tab_title">Срок</string>
 
-    <string name="main_fragment_sum_result">Нужно откладывать %1sр., чтобы накопить %2sр. за %3s</string>
+    <string name="calculate_partial_fragment_sum_result">Нужно откладывать %1sр. в день, чтобы накопить %2sр. за %3s</string>
 
-    <string name="calculate_fragment_text_hint">Введите срок и сколько вы хотите откладывать. Мы покажем, какая сумма получится в итоге.</string>
-    <string name="calculate_fragment_tab_title">Сумма</string>
-    <string name="calculate_fragment_sum_hint">Сумма ежедневно</string>
-    <string name="calculate_fragment_text_sum_result">Если вы будете откладывать %1sр. каждый день в течение %2s, то накопите %3sр.</string>
+    <string name="calculate_sum_fragment_text_hint">Введите срок и сколько вы хотите откладывать. Мы покажем, какая сумма получится в итоге.</string>
+    <string name="calculate_sum_fragment_tab_title">Сумма</string>
+    <string name="calculate_sum_fragment_sum_hint">Сумма ежедневно</string>
+    <string name="calculate_sum_fragment_text_sum_result">Если вы будете откладывать %1sр. каждый день в течение %2s, то накопите %3sр.</string>
 
     <string name="error_fragment_title">Неизвестный фрагмент</string>
 
