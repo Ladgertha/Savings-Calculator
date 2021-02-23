@@ -6,6 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="toolbar_color">#56436E</color>
     <color name="tab_layout_color">#745c94</color>
+    <color name="tab_selected_color">#6E568C</color>
 
     <color name="background">#f8f2e4</color>
 

@@ -1,7 +1,9 @@
 package ru.ladgertha.savingscalculator.adapter
 
-import androidx.fragment.app.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import ru.ladgertha.savingscalculator.utils.FragmentSteps
 
 class ViewPagerAdapter(
     activity: FragmentActivity,
@@ -13,10 +15,6 @@ class ViewPagerAdapter(
     }
 
     override fun getItemCount(): Int {
-        return FRAGMENTS_COUNT
-    }
-
-    companion object {
-        private const val FRAGMENTS_COUNT = 2
+        return FragmentSteps.values().size
     }
 }

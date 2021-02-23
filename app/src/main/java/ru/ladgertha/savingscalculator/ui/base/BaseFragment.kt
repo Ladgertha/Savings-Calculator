@@ -12,7 +12,7 @@ open class BaseFragment(layout: Int) : Fragment(layout) {
 
     fun setAdapter(view: AutoCompleteTextView) {
         val items =
-            listOf(getString(R.string.days))
+            listOf(getString(R.string.days), getString(R.string.month), getString(R.string.year))
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items)
         view.setAdapter(adapter)
     }

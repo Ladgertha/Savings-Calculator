@@ -5,27 +5,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 import ru.ladgertha.savingscalculator.R
-import ru.ladgertha.savingscalculator.databinding.FragmentMainLayoutBinding
+import ru.ladgertha.savingscalculator.databinding.FragmentCalculatePartialSumBinding
 import ru.ladgertha.savingscalculator.ui.base.BaseFragment
+import ru.ladgertha.savingscalculator.utils.TermsMapper
+import ru.ladgertha.savingscalculator.utils.formatWithSpaces
 import ru.ladgertha.savingscalculator.view_models.MainViewModel
-import java.lang.NumberFormatException
-import java.lang.RuntimeException
 import java.math.BigDecimal
 
-class MainFragment : BaseFragment(R.layout.fragment_main_layout) {
+class CalculatePartialSumFragment : BaseFragment(R.layout.fragment_calculate_partial_sum) {
 
     private val viewModel: MainViewModel by viewModel()
-    private var _binding: FragmentMainLayoutBinding? = null
+    private var _binding: FragmentCalculatePartialSumBinding? = null
     private val binding get() = _binding!!
+    private val termsMapper: TermsMapper by inject {
+        parametersOf(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMainLayoutBinding.inflate(inflater, container, false)
+        _binding = FragmentCalculatePartialSumBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -51,14 +56,25 @@ class MainFragment : BaseFragment(R.layout.fragment_main_layout) {
         binding.mainFragmentMainHint.text =
             String.format(
                 getString(R.string.main_fragment_sum_result),
-                result.toString(),
-                binding.mainFragmentSumEditText.text.toString(),
-                resources.getQuantityString(
-                    R.plurals.term_plurals_days,
-                    binding.mainFragmentQuantityEditText.text.toString().toInt(),
-                    binding.mainFragmentQuantityEditText.text.toString()
-                )
+                result.toString().trimStart('0').formatWithSpaces(),
+                binding.mainFragmentSumEditText.text.toString().trimStart('0').formatWithSpaces(),
+                getTerm()
             )
+    }
+
+    private fun getTerm() = resources.getQuantityString(
+        getTermId(),
+        binding.mainFragmentQuantityEditText.text.toString().toInt(),
+        binding.mainFragmentQuantityEditText.text.toString().trimStart('0').formatWithSpaces()
+    )
+
+    private fun getTermId(): Int {
+        return when (binding.mainFragmentTermTv.text.toString()) {
+            getString(R.string.days) -> R.plurals.term_plurals_days
+            getString(R.string.month) -> R.plurals.term_plurals_months
+            getString(R.string.year) -> R.plurals.term_plurals_years
+            else -> R.plurals.term_plurals_days
+        }
     }
 
     private fun count() {
@@ -75,7 +91,11 @@ class MainFragment : BaseFragment(R.layout.fragment_main_layout) {
             else -> {
                 val sum = binding.mainFragmentSumEditText.text.toString().toBigDecimal()
                 val term = binding.mainFragmentQuantityEditText.text.toString().toBigDecimal()
-                viewModel.countSum(sum, term)
+                viewModel.countSum(
+                    sum,
+                    term,
+                    termsMapper.mapStringToTerms(binding.mainFragmentTermTv.text.toString())
+                )
             }
         }
     }

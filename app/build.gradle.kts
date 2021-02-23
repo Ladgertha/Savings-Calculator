@@ -70,6 +70,7 @@ dependencies {
     implementation(Libraries.coroutinesAndroid)
 
     // FIREBASE
+    implementation(platform(Libraries.firebaseBom))
     implementation(Libraries.firebaseAnalytics)
     implementation(Libraries.firebaseCrashlytics)
     implementation(Libraries.firebasePerformance)

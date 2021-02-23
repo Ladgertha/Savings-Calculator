@@ -14,9 +14,10 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutFragments"
+        style="@style/CustomTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/tab_layout_color"
+        app:tabIndicatorColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:tabTextColor="@color/white" />
 
