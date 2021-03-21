@@ -39,5 +39,11 @@ class MainActivity : AppCompatActivity() {
             tab.text = getString(fragmentManager.getTitle(position))
         }.attach()
     }
+
+    companion object {
+        const val TERM = "TERM"
+        const val SUM = "SUM"
+        const val RESULT = "RESULT"
+    }
 }
 

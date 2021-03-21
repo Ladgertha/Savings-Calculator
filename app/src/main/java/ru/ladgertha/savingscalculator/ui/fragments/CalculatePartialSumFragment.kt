@@ -10,6 +10,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import ru.ladgertha.savingscalculator.R
 import ru.ladgertha.savingscalculator.databinding.FragmentCalculatePartialSumBinding
+import ru.ladgertha.savingscalculator.ui.MainActivity
 import ru.ladgertha.savingscalculator.ui.base.BaseFragment
 import ru.ladgertha.savingscalculator.utils.TermsMapper
 import ru.ladgertha.savingscalculator.utils.formatWithSpaces
@@ -50,6 +51,40 @@ class CalculatePartialSumFragment : BaseFragment(R.layout.fragment_calculate_par
                     setResultText(result)
                 }
             })
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        val sum = binding.mainFragmentSumEditText.text.toString()
+        if (sum.isNotEmpty()) {
+            outState.putString(MainActivity.SUM, sum)
+        }
+        val term = binding.mainFragmentQuantityEditText.text.toString()
+        if (term.isNotEmpty()) {
+            outState.putString(MainActivity.TERM, term)
+        }
+        val result = binding.mainFragmentMainHint.text.toString()
+        if (result.isNotEmpty()) {
+            outState.putString(MainActivity.RESULT, result)
+        }
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        savedInstanceState?.let {
+            val sum = savedInstanceState.getString(MainActivity.SUM)
+            if (!sum.isNullOrEmpty()) {
+                binding.mainFragmentSumEditText.setText(sum)
+            }
+            val term = savedInstanceState.getString(MainActivity.TERM)
+            if (!term.isNullOrEmpty()) {
+                binding.mainFragmentQuantityEditText.setText(term)
+            }
+            val result = savedInstanceState.getString(MainActivity.RESULT)
+            if (!result.isNullOrEmpty()) {
+                binding.mainFragmentMainHint.text = result
+            }
+        }
     }
 
     private fun setResultText(result: BigDecimal) {
