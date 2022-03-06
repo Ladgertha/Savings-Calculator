@@ -5,6 +5,7 @@ plugins {
     id(Plugin.KOTLIN_ANDROID)
     id(Plugin.GOOGLE_SERVICES)
     id(Plugin.CRASHLYTICS)
+    id(Plugin.SONAR_QUBE)
     id(Plugin.PERFORMANCE)
 }
 
@@ -42,6 +43,19 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    sonarqube {
+        properties {
+            property("sonar.projectName", "savingscalculator")
+            property("sonar.projectKey", "ru.ladgertha.savingscalculator")
+            property("sonar.language", "kotlin")
+            property("sonar.sources", "src/main/java")
+            property("sonar.binaries", "build")
+            property("sonar.sourceEncoding", "UTF-8")
+            property("sonar.login", "admin")
+            property("sonar.password", "admin1")
+        }
     }
 }
 

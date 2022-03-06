@@ -4,6 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -12,6 +13,7 @@ buildscript {
         classpath(ClassPath.googleServices)
         classpath(ClassPath.crashlytics)
         classpath(ClassPath.performance)
+        classpath(ClassPath.sonarQube)
     }
 }
 
@@ -19,5 +21,6 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 }

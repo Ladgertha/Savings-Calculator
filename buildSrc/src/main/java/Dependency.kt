@@ -4,6 +4,7 @@ object PluginVersion {
     const val googleServices = "4.3.5"
     const val crashlytics = "2.5.0"
     const val performance = "1.3.4"
+    const val sonarQube = "2.6.1"
 }
 
 object Plugin {
@@ -12,6 +13,7 @@ object Plugin {
     const val GOOGLE_SERVICES = "com.google.gms.google-services"
     const val CRASHLYTICS = "com.google.firebase.crashlytics"
     const val PERFORMANCE = "com.google.firebase.firebase-perf"
+    const val SONAR_QUBE = "org.sonarqube"
 }
 
 object ClassPath {
@@ -20,6 +22,8 @@ object ClassPath {
     const val googleServices = "com.google.gms:google-services:${PluginVersion.googleServices}"
     const val crashlytics = "com.google.firebase:firebase-crashlytics-gradle:${PluginVersion.crashlytics}"
     const val performance = "com.google.firebase:perf-plugin:${PluginVersion.performance}"
+    const val sonarQube =
+        "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${PluginVersion.sonarQube}"
 }
 
 object AppData {
